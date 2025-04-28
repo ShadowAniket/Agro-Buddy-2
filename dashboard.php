@@ -9,6 +9,10 @@ require_once 'check_session.php';
 $stmt = $conn->prepare("SELECT * FROM users WHERE id = ?");
 $stmt->execute([$_SESSION['user_id']]);
 $user = $stmt->fetch();
+$stmt = $conn->prepare("SELECT COUNT(*) FROM orders WHERE user_id = ?");
+$stmt->execute([$_SESSION['user_id']]);
+$order_count = $stmt->fetchColumn();
+
 
 // Fetch recent weather data from OpenWeather API
 $lat = isset($_SESSION['lat']) ? $_SESSION['lat'] : 20.5937;
