@@ -1,0 +1,350 @@
+    
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style_buyer.css">
+        <title>About Page</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <style>
+            .glow-green {
+                box-shadow: 0 0 10px rgba(40, 167, 69, 0.5); /* Green glow */
+                border-width: 2px;
+                border-radius: 5px; /* Increase for more roundness if needed */
+                background-color: white;  /* White background */
+                color: #28a745; /* Green text */
+            }
+
+            .glow-green:hover {
+                box-shadow: 0 0 15px limegreen; /* Stronger glow on hover */
+            }
+
+            /* Button Style*/
+
+            .thin-border {
+                border-width: 1px;
+                border-style: solid;
+                border-color: #28a745; 
+                background-color: #28a745; /* Keep green background */
+                color: white; /* White text */
+            }
+
+            /*Form Elements (Focus and Hover Effects) */
+            /* Green glowing effect on hover or focus */
+            .form-control:focus, 
+            .form-select:focus, 
+            .form-check-input:focus {
+                box-shadow: 0 0 8px 2px rgba(0, 255, 0, 0.8); /* Glowing green shadow */
+                border-color: #28a745; /* Green border */
+            }
+
+            .form-control:hover, 
+            .form-select:hover, 
+            .form-check-input:hover {
+                box-shadow: 0 0 8px 2px rgba(0, 255, 0, 0.8); /* Glowing green shadow */
+            }
+
+            /*List Items */
+            li {
+              list-style-type: none; /* No bullet points */
+            }
+
+            /* Paragraphs*/
+            .intro-box {
+                max-width: 1200px; /* Adjust as needed */
+                margin: 0 auto; /* Center the container */
+                padding: 0 20px; /* Adjust padding as needed */
+            }
+
+            .bold-heading {
+                font-weight: bold;
+                font-style: italic;
+            }
+
+            .row {
+                display: flex;
+                align-items: center; /* Vertically align items */
+                gap: 70px; /* Space between text and image */
+                margin-bottom: 40px; /* Space between rows */
+            }
+
+            .text-container {
+                flex: 1;
+                border: 1px solid #ddd; /* Add border around text container */
+                padding: 20px; /* Add padding inside the container */
+                border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; /* Optional: rounded corners */
+                background-color: #d9f1cc; /* Optional: background color */
+            }
+
+            .image-container {
+                flex: 1;
+            }
+
+            .image-container img {
+                max-width: 100%; /* Ensure image scales within container */
+                height: auto; /* Maintain aspect ratio */
+                border-radius: 10px; /* Optional: add some border radius */
+            }
+
+            .text-container-0 {
+                flex: 1;
+                border: 1px solid #ddd; /* Add border around text container */
+                padding: 30px; /* Add padding inside the container */
+                border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ; /* Optional: rounded corners */
+                background-color: #e9efbc; /* Optional: background color */
+            }
+
+            .text-container-1 {
+                flex: 1;
+                border: 1px solid #ddd; /* Add border around text container */
+                padding: 30px; /* Add padding inside the container */
+                border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ; /* Optional: rounded corners */
+                background-color: #eecea4; /* Optional: background color */
+            }
+
+            .text-container-2 {
+                flex: 1;
+                border: 1px solid #ddd; /* Add border around text container */
+                padding: 30px; /* Add padding inside the container */
+                border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ; /* Optional: rounded corners */
+                background-color: #caedf7; /* Optional: background color */
+            }
+
+            p {
+                color: #000000; /* Change text color to be visible on the background */
+                font-style: italic;
+            }
+
+            .row {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center; /* Center align the content */
+                text-align: center; /* Center align the text */
+                position: relative; /* Ensures the content is positioned correctly */
+                z-index: 1; /* Ensure content is above the background image */
+                padding: 50px 0; /* Add padding for spacing */
+            }
+
+              /* Scroll-control */
+              * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+              }
+
+              body {
+                font-family: Arial, sans-serif;
+                height: 250px;
+              }
+
+              .video-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                z-index: -1;
+              }
+
+              video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+
+              .content {
+                position: relative;
+                padding: 20px;
+                z-index: 10;
+                background-color: rgba(255, 255, 255, 0.8);
+              }
+
+              h1 {
+                text-align: center;
+                margin-top: 50px;
+              }
+
+
+        </style>
+    </head>
+    <body>
+
+    <!------------------------------------navbar------------------------------------>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="Home_buyer.html"> <img src="images/agrobuddy.png" width="200px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Home_buyer.html"><b>Home</b></a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="Product_buyer.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <b>Products</b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Product_buyer.html">All</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="Fruits_buyer.html">Fruits</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="Vegetables_buyer.html">Vegetables</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="Pulses_buyer.html">Pulses</a></li>
+              </ul>
+            </li>
+          
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="About_buyer.html"><b>About</b></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Cart_buyer.html"><b>Cart</b></a>
+            </li>
+
+          </ul>
+
+          <form class="d-flex search-spacing" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          
+          <ul>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Login_buyer.html"><b>SignUp</b></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Login_buyer.html"><b>Login</b></a>
+          </li>
+        </ul>
+          
+
+        </div>
+      </div>
+    </nav>
+<!------------------------------------intro info------------------------------------>
+
+    <div class="intro-box">
+      <div class="row">
+        <div class="text-container">
+            <h3 class="bold-heading">OUR VISION</h3>
+            <p>
+                To create a fair and transparent marketplace where consumers enjoy fresh, <br>healthy food, and farmers receive proper prices without middlemen.
+            </p>
+        </div>
+    </div>
+    
+      
+      <div class="row">
+        <div class="text-container-0">
+          <h3 class="bold-heading">OUR MISSION</h3>
+            <p>
+              To empower farmers and deliver fresh, affordable food directly to consumers, <br>ensuring fair trade and sustainability in the process.
+            </p>
+        </div>
+    </div>
+
+
+      <div class="row">
+          <div class="text-container-1">
+            <h3 class="bold-heading">ABOUT AGRO-BUDDY</h3>
+              <p>
+                Agro-Buddy is a B2C (Business-to-Consumer) platform designed to connect consumers directly with farmers for buying and selling fresh, healthy food. <br>Our goal is to create a fair and simple marketplace where buyers can enjoy high-quality produce, while farmers receive the full value for their products—free from the involvement of intermediaries. Our website makes it easy for farmers to list their fresh products with transparent pricing, while consumers can effortlessly browse and purchase from a variety of farm-fresh options. By bridging the gap between farms and homes, Agro-Buddy ensures fairness in the food market and supports local agriculture. With a clear vision to provide a transparent marketplace and a mission to empower farmers <br>and deliver fresh food to consumers, Agro-Buddy is committed to sustainable and fair trade in every transaction.
+              </p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="text-container-2">
+            <h3 class="bold-heading">KNOW YOUR CUSTOMER</h3>
+              <p>
+                We aim to build a secure marketplace by verifying both buyers and sellers. Our KYC process ensures a safe, transparent, <br>and trusted environment for everyone. <br><br> For Sellers: To protect our community, we verify sellers through: <br>Proof of identity and residence <br>Bank-issued IBAN to ensure safe payments <br><br>For Buyers: Buyers can explore and trade without restrictions. If you engage in certain financial transactions, KYC may be required to provide: <br>Proof of identity and residence <br>Bank details for secure payments <br>We’re committed to making Agro-Buddy a trusted platform for all!
+              </p>
+          </div>
+      </div>
+  </div>
+  
+<!------------------------------------scroll-control------------------------------------>
+
+<div class="video-container">
+  <video id="plantVideo" muted>
+    <source src="images/anime of plant growing.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!------------------------------------Footer------------------------------------>
+    <footer class="container py-5">
+        <hr style="border-top: 3px solid rgb(0, 0, 0);">
+        <div class="row">
+          
+          <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="#">Farm-to-Door Freshness</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Sustainable Packaging</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Real-Time Order Tracking</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Customizable Produce Baskets</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Seasonal Fruit Available</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Nutritional Info </a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Media</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="#">Google</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Facebook</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Instagram</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Website</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="#">Sourcing Guidelines</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Farming Practices</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Nutritional Benefits</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Organic Certifications</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="#">Sustainability</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Freshness Guarantee</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Local Partnerships</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Quality Assurance</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Customer Commitment</a></li>
+            </ul>
+          </div>
+        </div>
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 ">
+            <p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
+          
+            <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+          
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+            </ul>
+        </footer>
+    </footer>
+  
+  
+      <!-- Bootstrap JS and custom JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+      <script src="script_buyer.js"></script> <!-- Linking to your JS file -->
+    </body>
+  </html>
+  

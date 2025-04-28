@@ -1,0 +1,26 @@
+{
+    "Pulses": [
+        
+        {
+            "name": "Red Kidney Beans",
+            "price": 120,
+            "currency": "INR",
+            "description": "Nutritious and protein-rich red kidney beans, perfect for curries or salads.",
+            "image": "images/img (7).jpg"
+        },
+        {
+            "name": "Wheat (Dal)",
+            "price": 40,
+            "currency": "INR",
+            "description": "Whole wheat dal, great for making traditional Indian dishes like chapati and dal.",
+            "image": "images/img (10).jpg"
+        },
+        {
+            "name": "Yellow Split Peas (Toor Dal)",
+            "price": 70,
+            "currency": "INR",
+            "description": "Nutritious yellow split peas, also known as toor dal, a staple in Indian cuisine.",
+            "image": "images/img (12).jpg"
+        }
+    ]
+}

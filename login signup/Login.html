@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Add Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    /* Navbar Styles */
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: transparent !important; 
+        z-index: 1000; 
+        box-shadow: none; 
+    }
+
+    .navbar-brand img {
+        max-width: 250px; 
+        margin-left: 30px;
+    }
+
+    .navbar-logo {
+        width: 250px;
+        filter: drop-shadow(2.5px 2.5px 3px rgb(149, 166, 184)); 
+    }
+
+    .navbar-logo:hover {
+        filter: drop-shadow(2.5px 2.5px 3px rgb(255, 255, 255));
+    }
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-image: url("../images/dhruvi.jpg");
+        background-size: cover;
+    }
+    .wrapper{
+        position: relative;
+        width: 400px;
+        height: 400px;
+        background: rgba(255, 255, 255, 0.65);
+        box-shadow:  0px 0px 20px rgba(0, 0, 0, 0);
+        padding: 40px;
+        border-radius: 20px;
+    }
+    .wrapper:hover{
+        animation: animate 1s linear  infinite;
+    }
+    
+    .form-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    h2{
+        font-size: 35px;
+        color: #000000;
+        text-align: center;
+    }
+    .input-group{
+        position: relative;
+        margin: 30px 0;
+        border-bottom: 2px solid #000000;
+    }
+    .input-group label{
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: #000000;
+        pointer-events: none;
+        transition: .5s;
+    }
+    .input-group input{
+        width: 320px;
+        height: 40px;
+        font-size: 18px;
+        color: #000000;
+        padding: 0 5px;
+        background: transparent;
+        border: none;
+        outline: none;
+    }
+    .input-group input:focus~label,
+    .input-group input:valid~label {
+        top: -5px;
+    }
+    .remember{
+        margin: -5px 0 15px 5px;
+    }
+    .remember label{
+        color: #000000;
+        font-size: 18px;
+    }
+    .remember label input{
+        accent-color: rgb(0,8,255);
+    }
+    button{
+        position: relative;
+        width: 100%;
+        height: 40px;
+        background: rgb(23,117,240);
+        box-shadow: 0 0 10px rgb(0,8,255);
+        font-size: 16px;
+        color: #ffffff;
+        font-weight: 500;
+        cursor: pointer;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+    }
+    button:hover {
+        box-shadow: 0px 0px 50px rgba(0, 110, 255, 0.7);
+    }
+    .signUp-link{
+        font-size: 14px;
+        text-align: center;
+        margin: 15px 0;
+    }
+    .signUp-link p{
+        color: #000000;
+    }
+    .signUp-link p a {
+        color: rgb(0,8,255);;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    .signUp-link a:hover{
+        text-decoration: underline;
+    }
+    .error-message {
+        color: red;
+        text-align: center;
+        margin-top: 10px;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <img class="navbar-logo" src="images" alt="AgroBuddy Logo">
+    </nav>
+    
+    <div class="wrapper">
+        <div class="form-wrapper sign-in">
+            <form id="loginForm">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <input type="email" id="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="remember">
+                    <label><input type="checkbox" id="rememberMe"> Remember me</label>
+                </div>
+                <button type="submit">Login</button>
+                <div id="error-message" class="error-message"></div>
+                <div class="signUp-link">
+                    <p>Don't have an account? <a href="signup-2.html">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyB07xaJW-ygpwpI3dQu2gqdBz9aqfWYBho",
+            authDomain: "agro-buddy-d0267.firebaseapp.com",
+            projectId: "agro-buddy-d0267",
+            storageBucket: "agro-buddy-d0267.appspot.com",
+            messagingSenderId: "569603341143",
+            appId: "1:569603341143:web:817580ce8a1c8af4be5c12"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        // Login form submission
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const rememberMe = document.getElementById('rememberMe').checked;
+            const errorMessage = document.getElementById('error-message');
+
+            // Clear previous error message
+            errorMessage.textContent = '';
+
+            // Set persistence based on "Remember me" checkbox
+            const persistence = rememberMe ? 
+                firebase.auth.Auth.Persistence.LOCAL : 
+                firebase.auth.Auth.Persistence.SESSION;
+
+            auth.setPersistence(persistence)
+                .then(() => {
+                    return auth.signInWithEmailAndPassword(email, password);
+                })
+                .then((userCredential) => {
+                    // Get user data from Firestore
+                    return db.collection('users').doc(userCredential.user.uid).get();
+                })
+                .then((doc) => {
+                    if (doc.exists) {
+                        // Store user data in localStorage
+                        localStorage.setItem('userData', JSON.stringify(doc.data()));
+                        // Redirect to home page
+                        window.location.href = "../Home.html";
+                    } else {
+                        throw new Error('User data not found');
+                    }
+                })
+                .catch((error) => {
+                    let errorMsg = 'An error occurred during login.';
+                    switch (error.code) {
+                        case 'auth/user-not-found':
+                            errorMsg = 'No account found with this email.';
+                            break;
+                        case 'auth/wrong-password':
+                            errorMsg = 'Incorrect password.';
+                            break;
+                        case 'auth/invalid-email':
+                            errorMsg = 'Invalid email address.';
+                            break;
+                        case 'auth/too-many-requests':
+                            errorMsg = 'Too many failed attempts. Please try again later.';
+                            break;
+                    }
+                    errorMessage.textContent = errorMsg;
+                });
+        });
+
+        // Check if user is already logged in
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                // User is signed in, redirect to home page
+                window.location.href = "../Home.html";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+            .navbar {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                background-color: transparent !important; /* No background color */
+                z-index: 1000; /* Ensure it's on top of other elements */
+                box-shadow: none; /* Remove any shadow */
+                transition: none; /* Remove transition if not needed */
+            }
+
+            /* Ensure the navbar-collapse also has no background */
+            .navbar-collapse {
+                background-color: transparent !important; /* No background color for collapsed navbar */
+            }
+
+            .navbar-brand img {
+                max-width: 250px; /* Adjust logo size */
+                margin-left: 30px;
+            }
+
+            .navbar-logo {
+                width: 250px; /* Adjust as per your requirement */
+                filter: drop-shadow(2.5px 2.5px 3px rgb(255, 255, 255)); /* Drop shadow effect */
+            }
+
+            .navbar-logo:hover {
+                filter: drop-shadow(2.5px 2.5px 3px rgb(255, 255, 255)); /* Stronger shadow on hover */
+            }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url(images/weatfield.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 25px;
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.758);
+            padding: 30px;
+            border-radius: 5px;
+            height: 235px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+            text-align: left;
+            position: relative;
+        }
+        .login-container h1{
+            margin-top: 5px;
+        }
+        input[type="radio"] {
+            margin: 5px;
+        }
+        button {
+            width: 100%;
+            margin: 30px 0px;
+            padding: 5px;
+            font-size: 20px;
+        }
+        .admin-link a {
+        position: fixed;
+        bottom: 9px;
+        right: 9px;
+        margin: 0;
+        color: rgba(142, 136, 136, 0.716);
+        font-weight: lighter;
+        font-size: medium;
+        text-decoration: none;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        }
+        .admin-link a:hover{
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <a class="navbar-brand" href="Home.html"> 
+            <img class="navbar-logo" src="images/agrobuddy.png" alt="AgroBuddy Logo">
+        </a>
+    </nav>
+    
+    <div class="login-container">
+        <h1>Login As</h1>
+        <label><input type="radio" name="role" value="buying"> Buyer</label><br>
+        <label><input type="radio" name="role" value="selling"> Seller</label><br>
+        <button onclick="redirectToPage()">Login</button>
+    </div>
+    <p class="admin-link"><a href="#">Admin</a></p>
+
+    <script>
+        function redirectToPage() {
+            var roles = document.getElementsByName("role");
+            var selectedRole = null;
+    
+            for (var i = 0; i < roles.length; i++) {
+                if (roles[i].checked) {
+                    selectedRole = roles[i].value;
+                    break;
+                }
+            }
+    
+            if (!selectedRole) {
+                alert("Please select a role");
+                return;
+            }
+    
+            // Store role in localStorage 
+            localStorage.setItem("userRole", selectedRole);
+    
+            // Redirect based on selection
+            if (selectedRole === "buying") {
+                window.location.href = "Buyer/home_buyer.html";
+            } else if (selectedRole === "selling") {
+                window.location.href = "home.html";
+            } else {
+                alert("Invalid role selected");
+            }
+        }
+    </script>
+    
+
+    
+    
+</body>
+</html>

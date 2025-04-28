@@ -1,0 +1,64 @@
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Weather Map</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .map-container {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+        }
+        .state {
+            position: absolute;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 5px;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>India Weather Map</h1>
+    <div class="map-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/India_Map.svg" alt="India Map" width="800">
+        <div class="state" id="weather-info">Hover over a state to see the weather.</div>
+    </div>
+
+    <script>
+        const apiKey = "37e6ee4c6483ac56691efdc8986e363b";
+        const states = {
+            "Delhi": { x: 420, y: 150 },
+            "Maharashtra": { x: 300, y: 400 },
+            "Tamil Nadu": { x: 450, y: 600 },
+            "West Bengal": { x: 600, y: 300 }
+        };
+        
+        const weatherInfo = document.getElementById("weather-info");
+        
+        document.querySelector(".map-container img").addEventListener("mousemove", function(event) {
+            for (let state in states) {
+                let { x, y } = states[state];
+                if (Math.abs(event.offsetX - x) < 20 && Math.abs(event.offsetY - y) < 20) {
+                    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${state},IN&appid=${apiKey}&units=metric`)
+                        .then(response => response.json())
+                        .then(data => {
+                            weatherInfo.innerHTML = `${state}: ${data.main.temp}°C, ${data.weather[0].description}`;
+                            weatherInfo.style.left = `${event.offsetX}px`;
+                            weatherInfo.style.top = `${event.offsetY}px`;
+                            weatherInfo.style.display = "block";
+                        });
+                    return;
+                }
+            }
+            weatherInfo.style.display = "none";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+[
+    {
+        "id": "fruit-1",
+        "name": "Apple",
+        "price": 120,
+        "currency": "INR",
+        "description": "Fresh and crisp apples, rich in fiber and antioxidants.",
+        "image": "images/apple.png",
+        "category": "fruits"
+    },
+    {
+        "id": "fruit-2",
+        "name": "Banana",
+        "price": 60,
+        "currency": "INR",
+        "description": "Sweet and nutritious bananas, excellent source of potassium.",
+        "image": "images/banana.png",
+        "category": "fruits"
+    },
+    {
+        "id": "fruit-3",
+        "name": "Orange",
+        "price": 80,
+        "currency": "INR",
+        "description": "Juicy oranges packed with vitamin C for immune support.",
+        "image": "images/orange.png",
+        "category": "fruits"
+    },
+    {
+        "id": "fruit-4",
+        "name": "Mango",
+        "price": 150,
+        "currency": "INR",
+        "description": "Sweet and aromatic mangoes, the king of fruits.",
+        "image": "images/mango.png",
+        "category": "fruits"
+    },
+    {
+        "id": "fruit-5",
+        "name": "Strawberry",
+        "price": 200,
+        "currency": "INR",
+        "description": "Sweet and tangy strawberries, rich in antioxidants.",
+        "image": "images/strawberry.png",
+        "category": "fruits"
+    },
+    {
+        "id": "fruit-6",
+        "name": "Grapes",
+        "price": 180,
+        "currency": "INR",
+        "description": "Sweet and juicy grapes, perfect for snacking.",
+        "image": "images/grapes.png",
+        "category": "fruits"
+    },
+    {
+        "id": "fruit-7",
+        "name": "Watermelon",
+        "price": 90,
+        "currency": "INR",
+        "description": "Refreshing watermelon, hydrating and perfect for summer.",
+        "image": "images/watermelon.png",
+        "category": "fruits"
+    },
+    {
+        "id": "fruit-8",
+        "name": "Pineapple",
+        "price": 130,
+        "currency": "INR",
+        "description": "Sweet and tangy pineapple, rich in vitamins and enzymes.",
+        "image": "images/pineapple.png",
+        "category": "fruits"
+    },
+    {
+        "id": "fruit-9",
+        "name": "Pomegranate",
+        "price": 160,
+        "currency": "INR",
+        "description": "Antioxidant-rich pomegranate with sweet-tart flavor.",
+        "image": "images/pomegranate.png",
+        "category": "fruits"
+    },
+    {
+        "id": "fruit-10",
+        "name": "Blue-Berry",
+        "price": 450,
+        "currency": "INR",
+        "description": "Plump and sweet blueberries, packed with antioxidants for a healthy boost.",
+        "image": "images/img (3).jpg",
+        "category": "fruits"
+    },
+    {
+        "id": "veg-1",
+        "name": "Tomato",
+        "price": 50,
+        "currency": "INR",
+        "description": "Juicy and ripe red tomatoes, great for sauces, salads, and sandwiches.",
+        "image": "images/img (8).jpg",
+        "category": "vegetables"
+    },
+    {
+        "id": "veg-2",
+        "name": "Potato",
+        "price": 40,
+        "currency": "INR",
+        "description": "Versatile potatoes, perfect for roasting, mashing, or frying.",
+        "image": "images/potato.png",
+        "category": "vegetables"
+    },
+    {
+        "id": "veg-3",
+        "name": "Onion",
+        "price": 35,
+        "currency": "INR",
+        "description": "Essential onions, adding flavor to countless dishes.",
+        "image": "images/onion.png",
+        "category": "vegetables"
+    },
+    {
+        "id": "veg-4",
+        "name": "Carrot",
+        "price": 35,
+        "currency": "INR",
+        "description": "Sweet and crunchy carrots, ideal for salads, snacks, or cooking.",
+        "image": "images/img (9).jpg",
+        "category": "vegetables"
+    },
+    {
+        "id": "veg-5",
+        "name": "Cabbage",
+        "price": 30,
+        "currency": "INR",
+        "description": "Crunchy cabbage, ideal for slaws, salads, or cooking in a variety of dishes.",
+        "image": "images/img (6).jpg",
+        "category": "vegetables"
+    },
+    {
+        "id": "veg-6",
+        "name": "Brinjal",
+        "price": 60,
+        "currency": "INR",
+        "description": "Fresh brinjal, also known as eggplant, great for grilling, roasting, or curries.",
+        "image": "images/img (5).jpg",
+        "category": "vegetables"
+    },
+    {
+        "id": "veg-7",
+        "name": "Cucumber",
+        "price": 25,
+        "currency": "INR",
+        "description": "Fresh cucumbers, perfect for salads, sandwiches, or cooling snacks.",
+        "image": "images/img (11).jpg",
+        "category": "vegetables"
+    },
+    {
+        "id": "veg-8",
+        "name": "Pumpkin",
+        "price": 40,
+        "currency": "INR",
+        "description": "Rich and hearty pumpkins, excellent for soups, pies, or roasting.",
+        "image": "images/img (4).jpg",
+        "category": "vegetables"
+    },
+    {
+        "id": "veg-9",
+        "name": "Capsicum",
+        "price": 70,
+        "currency": "INR",
+        "description": "Crisp and colorful bell peppers, perfect for stir-fries and salads.",
+        "image": "images/capsicum.png",
+        "category": "vegetables"
+    },
+    {
+        "id": "veg-10",
+        "name": "Spinach",
+        "price": 45,
+        "currency": "INR",
+        "description": "Nutrient-rich spinach, versatile for salads, smoothies, and cooked dishes.",
+        "image": "images/spinach.png",
+        "category": "vegetables"
+    },
+    {
+        "id": "pulse-1",
+        "name": "Red Kidney Beans",
+        "price": 120,
+        "currency": "INR",
+        "description": "Nutritious and protein-rich red kidney beans, perfect for curries or salads.",
+        "image": "images/img (7).jpg",
+        "category": "pulses"
+    },
+    {
+        "id": "pulse-2",
+        "name": "Yellow Split Peas (Toor Dal)",
+        "price": 70,
+        "currency": "INR",
+        "description": "Nutritious yellow split peas, also known as toor dal, a staple in Indian cuisine.",
+        "image": "images/img (12).jpg",
+        "category": "pulses"
+    },
+    {
+        "id": "pulse-3",
+        "name": "Chickpeas",
+        "price": 90,
+        "currency": "INR",
+        "description": "Versatile chickpeas, perfect for hummus, curries, and salads.",
+        "image": "images/chickpeas.png",
+        "category": "pulses"
+    },
+    {
+        "id": "pulse-4",
+        "name": "Black Gram (Urad Dal)",
+        "price": 110,
+        "currency": "INR",
+        "description": "Protein-rich black gram, essential for many Indian dishes.",
+        "image": "images/blackgram.png",
+        "category": "pulses"
+    },
+    {
+        "id": "pulse-5",
+        "name": "Green Gram (Moong Dal)",
+        "price": 95,
+        "currency": "INR",
+        "description": "Easily digestible green gram, perfect for soups and sprouts.",
+        "image": "images/greengram.png",
+        "category": "pulses"
+    },
+    {
+        "id": "pulse-6",
+        "name": "Masoor Dal",
+        "price": 85,
+        "currency": "INR",
+        "description": "Quick-cooking masoor dal, with a mild, earthy flavor.",
+        "image": "images/brownlentils.png",
+        "category": "pulses"
+    },
+    {
+        "id": "pulse-7",
+        "name": "Chana Dal",
+        "price": 75,
+        "currency": "INR",
+        "description": "Split chickpeas with a nutty flavor, perfect for traditional dishes.",
+        "image": "images/yellowsplitpeas.png",
+        "category": "pulses"
+    },
+    {
+        "id": "pulse-8",
+        "name": "Rajma",
+        "price": 130,
+        "currency": "INR",
+        "description": "Protein-packed rajma beans, perfect for hearty curries.",
+        "image": "images/redkidneybeans.png",
+        "category": "pulses"
+    },
+    {
+        "id": "pulse-9",
+        "name": "Black-eyed Peas",
+        "price": 100,
+        "currency": "INR",
+        "description": "Nutritious black-eyed peas with a distinctive flavor.",
+        "image": "images/blackeyedpeas.png",
+        "category": "pulses"
+    },
+    {
+        "id": "pulse-10",
+        "name": "Soybean",
+        "price": 140,
+        "currency": "INR",
+        "description": "Protein-rich soybeans, versatile for many culinary applications.",
+        "image": "images/soyachunks.png",
+        "category": "pulses"
+    }
+]

@@ -1,0 +1,37 @@
+# Sensitive configuration files
+config.php
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE/editor files
+.vscode/
+.idea/
+.history/
+*.swp
+*.bak
+*.tmp
+
+# Dependency directories (if any)
+node_modules/
+bower_components/
+
+# Coverage/build/test
+coverage/
+lib-cov/
+.nyc_output/
+.grunt/
+*.tgz
+
+# Misc
+*.sqlite

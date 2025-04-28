@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="soil.css">
+    <title>Soil-Type</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <style>
+      
+        .search-spacing {
+            margin-left: 450px; /* Adjust the value as needed for more or less space */
+        }
+
+        .glow-green {
+            box-shadow: 0 0 10px rgba(11, 108, 38, 0.5); /* Glow effect with #0B6C26 */
+            border-width: 2px;
+            border-radius: 5px; /* Increase for more roundness if needed */
+            background-color: white; /* White background */
+            color: #4CAF50; /* Text color updated to #4CAF50 */
+        }
+
+        .glow-green:hover {
+            box-shadow: 0 0 15px rgba(11, 108, 38, 0.7); /* Stronger glow with #0B6C26 on hover */
+        }
+
+        /* Form Elements (Focus and Hover Effects) */
+        .form-control:focus, 
+        .form-select:focus, 
+        .form-check-input:focus {
+            box-shadow: 0 0 8px 2px rgba(11, 108, 38, 0.8); /* Glowing effect with #0B6C26 */
+            border-color: #4CAF50; /* Green border */
+        }
+
+        .form-control:hover, 
+        .form-select:hover, 
+        .form-check-input:hover {
+            box-shadow: 0 0 8px 2px rgba(11, 108, 38, 0.8); /* Glowing effect with #0B6C26 */
+        }
+
+        /* Button */
+        .btn-outline-success {
+            color: rgb(0, 0, 0); /* White text */
+            border-color: #4CAF50; /* Updated border color */
+        }
+
+        .btn-outline-success:hover {
+            background-color: #0B6C26; /* Updated background color on hover */
+        }
+
+        /* List Items */
+        li {
+            list-style-type: none; /* No bullet points */
+        }
+
+        /* Navbar Background */
+        .bg-body-tertiary {
+            background-color: #f1f1f1; /* Light gray background */
+        }
+
+        /* Footer Background */
+        footer {
+            background-color: #ffffff; /* Light background */
+        }
+
+        /* Footer Links */
+        footer a {
+            color: #4CAF50; /* Updated color for footer links */
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+
+    </style>
+  </head>
+
+    <!------------------------------------navbar------------------------------------>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="Home.html"> <img src="images/agrobuddy.png" width="200px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Home.html"><b>Home</b></a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="Product.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <b>Products</b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Product.html">All</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="Fruits.html">Fruits</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="Vegetables.html">Vegetables</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="Pulses.html">Pulses</a></li>
+              </ul>
+            </li>
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><b>Data-Type</b></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Soil-Analysis.html">Soil-Type</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="Weather-Forecast.html">Weather-Forecast</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="About.html"><b>About</b></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Cart.html"><b>Cart</b></a>
+            </li>
+
+          </ul>
+
+          <form class="d-flex search-spacing" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          
+          <ul>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Login.html"><b>SignUp</b></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Login.html"><b>Login</b></a>
+          </li>
+        </ul>
+          
+
+        </div>
+      </div>
+    </nav>
+    <!------------------------------------Body------------------------------------>
+    
+    <iframe title="[ Insert title here ]" 
+            aria-label="Map" 
+            id="datawrapper-chart-4mzcJ" 
+            src="https://datawrapper.dwcdn.net/4mzcJ/2/" 
+            scrolling="no" 
+            frameborder="0" 
+            style="border: none;" 
+            width="800" 
+            height="1100" 
+            data-external="1">
+    </iframe>
+    
+    <h1><strong>Soil Types</strong></h1>
+
+    <div class="flip-card-container">
+
+    
+      <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="images/Costal Aluvilium soil.jpeg" alt="Coastal Alluvial Soil" style="width:100%;height:100%;">
+            </div>
+            <div class="flip-card-back">
+                <h2>Coastal Alluvial Soil</h2>
+                <p><strong>Description:</strong> Found along coastlines, these soils are sandy, saline, and enriched with organic matter.</p>
+                <p><strong>Found in:</strong> Kerala, Tamil Nadu, Andaman and Nicobar Islands</p>
+                <p><strong>Crops:</strong> Coconut, Rice, Millets</p>
+            </div>
+        </div>
+      </div>
+    
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="images/Forest Soil.jpeg" alt="Forest Soil" style="width:100%;height:100%;">
+            </div>
+            <div class="flip-card-back">
+                <h2>Forest Soil</h2>
+                <p><strong>Description:</strong> Found in forested regions, these soils are rich in organic matter and humus but are acidic in nature.</p>
+                <p><strong>Found in:</strong> Himachal Pradesh, Jammu & Kashmir, Arunachal Pradesh</p>
+                <p><strong>Crops:</strong> Tea, Coffee, Spices</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="images/Aluvial Soil.jpeg" alt="Alluvial Soil" style="width:100%;height:100%;">
+            </div>
+            <div class="flip-card-back">
+                <h2>Alluvial Soil</h2>
+                <p><strong>Description:</strong> Highly fertile soil, formed by river deposits, suitable for agriculture.</p>
+                <p><strong>Found in:</strong> Uttar Pradesh, Bihar, Punjab</p>
+                <p><strong>Crops:</strong> Rice, Wheat, Sugarcane</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="images/Sandy Soil.jpeg" alt="Sandy Soil" style="width:100%;height:100%;">
+            </div>
+            <div class="flip-card-back">
+                <h2>Sandy Soil</h2>
+                <p><strong>Description:</strong> Coarse-textured soil, well-drained but low in fertility and moisture retention.</p>
+                <p><strong>Found in:</strong> Rajasthan, Gujarat</p>
+                <p><strong>Crops:</strong> Bajra, Barley, Dates</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="images/Mountain Soil.jpeg" alt="Mountain Soil" style="width:100%;height:100%;">
+            </div>
+            <div class="flip-card-back">
+                <h2>Mountain Soil</h2>
+                <p><strong>Description:</strong> Found in hilly and mountainous regions, these soils are rich in organic matter but prone to erosion.</p>
+                <p><strong>Found in:</strong> Uttarakhand, Himachal Pradesh</p>
+                <p><strong>Crops:</strong> Tea, Apples, Barley</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="images/Coral & Sandy.jpeg" alt="Coral and Sandy Soil" style="width:100%;height:100%;">
+            </div>
+            <div class="flip-card-back">
+                <h2>Coral and Sandy Soil</h2>
+                <p><strong>Description:</strong> Found in coral regions, alkaline and nutrient-poor, often requiring organic inputs.</p>
+                <p><strong>Found in:</strong> Lakshadweep, Andaman and Nicobar Islands</p>
+                <p><strong>Crops:</strong> Coconut, Areca Nut</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+          <div class="flip-card-front">
+              <img src="images/Red Soil.jpeg" alt="Red Soil" style="width:100%;height:100%;">
+          </div>
+          <div class="flip-card-back">
+              <h2>Red Soil</h2>
+              <p><strong>Description:</strong> Red soil is rich in iron oxide, giving it a distinct red color. It is well-drained and suitable for crops under irrigation.</p>
+              <p><strong>Found in:</strong> Chhattisgarh, Jharkhand, Odisha</p>
+              <p><strong>Crops:</strong> Millets, Pulses, Oilseeds</p>
+          </div>
+      </div>
+  </div>
+  
+  <div class="flip-card">
+      <div class="flip-card-inner">
+          <div class="flip-card-front">
+              <img src="images/Yellow Soil.jpeg" alt="Yellow Soil" style="width:100%;height:100%;">
+          </div>
+          <div class="flip-card-back">
+              <h2>Yellow Soil</h2>
+              <p><strong>Description:</strong> Yellow soil forms under humid conditions and appears yellow due to the hydration of iron compounds. It has moderate fertility.</p>
+              <p><strong>Found in:</strong> Chhattisgarh, Jharkhand, Odisha</p>
+              <p><strong>Crops:</strong> Millets, Pulses, Oilseeds</p>
+          </div>
+      </div>
+  </div>
+  
+  <div class="flip-card">
+      <div class="flip-card-inner">
+          <div class="flip-card-front">
+              <img src="images/Black Soil.jpeg" alt="Black Soil" style="width:100%;height:100%;">
+          </div>
+          <div class="flip-card-back">
+              <h2>Black Soil</h2>
+              <p><strong>Description:</strong> Black soil is known for its moisture-retaining capacity and high clay content, making it ideal for cotton cultivation.</p>
+              <p><strong>Found in:</strong> Maharashtra, Karnataka, Andhra Pradesh</p>
+              <p><strong>Crops:</strong> Cotton, Coffee, Sugarcane</p>
+          </div>
+      </div>
+  </div>
+  
+  <div class="flip-card">
+      <div class="flip-card-inner">
+          <div class="flip-card-front">
+              <img src="images/Laterial Soil.jpeg" alt="Laterite Soil" style="width:100%;height:100%;">
+          </div>
+          <div class="flip-card-back">
+              <h2>Laterite Soil</h2>
+              <p><strong>Description:</strong> Laterite soil is formed in tropical regions and is rich in iron and aluminum. It requires fertilizers for agricultural use.</p>
+              <p><strong>Found in:</strong> Maharashtra, Karnataka, Andhra Pradesh</p>
+              <p><strong>Crops:</strong> Tea, Coffee, Cashew</p>
+          </div>
+      </div>
+  </div>
+  
+    
+    </div>
+
+    <!------------------------------------Footer------------------------------------>
+    <footer class="container py-5">
+      <hr style="border-top: 3px solid rgb(0, 0, 0);">
+      <div class="row">
+        
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary text-decoration-none" href="#">Farm-to-Door Freshness</a></li>
+            <li><a class="link-secondary text-decoration-none" href="#">Sustainable Packaging</a></li>
+            <li><a class="link-secondary text-decoration-none" href="#">Real-Time Order Tracking</a></li>
+            <li><a class="link-secondary text-decoration-none" href="#">Customizable Produce Baskets</a></li>
+            <li><a class="link-secondary text-decoration-none" href="#">Seasonal Fruit Available</a></li>
+            <li><a class="link-secondary text-decoration-none" href="#">Nutritional Info </a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Media</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary text-decoration-none" href="#">Google</a></li>
+            <li><a class="link-secondary text-decoration-none" href="#">Facebook</a></li>
+            <li><a class="link-secondary text-decoration-none" href="#">Instagram</a></li>
+            <li><a class="link-secondary text-decoration-none" href="#">Website</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary text-decoration-none" href="#">Sourcing Guidelines</a></li>
+            <li><a class="link-secondary text-decoration-none" href="#">Farming Practices</a></li>
+            <li><a class="link-secondary text-decoration-none" href="#">Nutritional Benefits</a></li>
+            <li><a class="link-secondary text-decoration-none" href="#">Organic Certifications</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="link-secondary text-decoration-none" href="#">Sustainability</a></li>
+            <li><a class="link-secondary text-decoration-none" href="#">Freshness Guarantee</a></li>
+            <li><a class="link-secondary text-decoration-none" href="#">Local Partnerships</a></li>
+            <li><a class="link-secondary text-decoration-none" href="#">Quality Assurance</a></li>
+            <li><a class="link-secondary text-decoration-none" href="#">Customer Commitment</a></li>
+          </ul>
+        </div>
+      </div>
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 ">
+          <p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
+        
+          <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+        
+          <ul class="nav col-md-4 justify-content-end">
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+          </ul>
+      </footer>
+  </footer>
+
+
+    <!-- Bootstrap JS and custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script> <!-- Linking to your JS file -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          const iframe = document.getElementById("datawrapper-chart-4mzcJ");
+          iframe.addEventListener("load", () => {
+              console.log("Iframe has loaded successfully!");
+          });
+      });
+  </script>
+  
+  </body>
+</html>

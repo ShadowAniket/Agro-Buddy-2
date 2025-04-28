@@ -1,0 +1,75 @@
+{
+    "products": [
+        
+        {
+            "name": "Blue-Berry",
+            "price": 450,
+            "currency": "INR",
+            "description": "Plump and sweet blueberries, packed with antioxidants for a healthy boost.",
+            "image": "images/img (3).jpg"
+        },
+        {
+            "name": "Pumpkin",
+            "price": 40,
+            "currency": "INR",
+            "description": "Rich and hearty pumpkins, excellent for soups, pies, or roasting.",
+            "image": "images/img (4).jpg"
+        },
+        {
+            "name": "Brinjal",
+            "price": 60,
+            "currency": "INR",
+            "description": "Fresh brinjal, also known as eggplant, great for grilling, roasting, or curries.",
+            "image": "images/img (5).jpg"
+        },
+        {
+            "name": "Cabbage",
+            "price": 30,
+            "currency": "INR",
+            "description": "Crunchy cabbage, ideal for slaws, salads, or cooking in a variety of dishes.",
+            "image": "images/img (6).jpg"
+        },
+        {
+            "name": "Red Kidney Beans",
+            "price": 120,
+            "currency": "INR",
+            "description": "Nutritious and protein-rich red kidney beans, perfect for curries or salads.",
+            "image": "images/img (7).jpg"
+        },
+        {
+            "name": "Red Tomato",
+            "price": 50,
+            "currency": "INR",
+            "description": "Juicy and ripe red tomatoes, great for sauces, salads, and sandwiches.",
+            "image": "images/img (8).jpg"
+        },
+        {
+            "name": "Carrot",
+            "price": 35,
+            "currency": "INR",
+            "description": "Sweet and crunchy carrots, ideal for salads, snacks, or cooking.",
+            "image": "images/img (9).jpg"
+        },
+        {
+            "name": "Wheat (Dal)",
+            "price": 40,
+            "currency": "INR",
+            "description": "Whole wheat dal, great for making traditional Indian dishes like chapati and dal.",
+            "image": "images/img (10).jpg"
+        },
+        {
+            "name": "Cucumber",
+            "price": 25,
+            "currency": "INR",
+            "description": "Fresh cucumbers, perfect for salads, sandwiches, or cooling snacks.",
+            "image": "images/img (11).jpg"
+        },
+        {
+            "name": "Yellow Split Peas (Toor Dal)",
+            "price": 70,
+            "currency": "INR",
+            "description": "Nutritious yellow split peas, also known as toor dal, a staple in Indian cuisine.",
+            "image": "images/img (12).jpg"
+        }
+    ]
+}

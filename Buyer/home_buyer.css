@@ -1,0 +1,223 @@
+/*Navbar */
+.form-control:focus {
+    border-color: green; /* Change border color to green */
+    box-shadow: 0 0 5px rgb(0, 128, 0); /* Add a green glow around the input */
+    outline: none; /* Remove the default outline */
+}
+
+/*Slideshow Animation */
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.categories {
+    margin: 70px 0;
+}
+
+.carousel-caption.slide3-text p {
+    font-size: 35px; /* Adjust this value as needed */
+    line-height: 1.25; /* Adjust line height for better readability */
+    color: #fff; /* Adjust text color if needed */
+    text-shadow: 2px 2px 4px rgb(0, 0, 0); /* Optional: Adds a shadow to make the text more readable */
+}
+
+/* Product Cards*/
+.col-3 {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.equal-img {
+    width: 100%;
+    height: 300px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensures the image covers the box while maintaining aspect ratio */
+}
+
+/*Slide-Show Container */
+.offer {
+    background: radial-gradient(#fff, #c2efc5);
+    margin-top: 80px;
+    padding: 15px;
+}
+
+.col-1 .offer-img {
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.col-0 {
+    flex-basis: 50%;
+    min-width: 300px;
+    margin-right: 200px; /* Adding space between text and image */
+}
+
+.col-0 h1 {
+    font-size: 40px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.row-0 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Aligning items to the start */
+}
+
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.col-1 {
+    flex-shrink: 0; /* Ensuring image doesn't get squeezed */
+}
+
+/*Carousel */
+.carousel-item {
+    position: relative;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 20px; /* Adjust this value to control how far from the left edge it starts */
+    transform: translateY(-50%); /* Adjust vertical alignment to center */
+    padding: 20px;
+    color: #fff;
+    text-align: left;
+    width: 60%; /* Adjust the width as needed to fit the content */
+}
+
+.carousel-caption.left {
+    left: 10%!important;
+    text-align: left!important;
+}
+
+/*Buttons */
+.btn {
+    background-color: rgb(16, 126, 25); /* Green background color */
+    color: #fff;
+    border: none;
+    padding: 5px 2px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5); /* Green glow effect */
+    transition: all 0.1s ease;
+}
+
+.btn:hover {
+    background-color: #0f7c17; /* Darker green on hover */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7); /* More intense green glow on hover */
+}
+
+/*Form Fields*/
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25); /* Green glow */
+    border-color: #28a745; /* Green border */
+}
+
+/*Product Images*/
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/*Cart Page*/
+body {
+    font-family: Arial, sans-serif;
+}
+
+.cart-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#checkout-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#checkout-btn:hover {
+    background-color: #218838;
+}
+
+/*Intro Section (Container)*/
+.intro-box {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Adjust padding as needed */
+}
+
+.row {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    gap: 70px; /* Space between text and image */
+    margin-bottom: 40px; /* Space between rows */
+}
+
+/*Text Container Styles*/
+.text-container {
+    flex: 1;
+    border: 1px solid #ddd; /* Add border around text container */
+    padding: 20px; /* Add padding inside the container */
+    border-radius: 66% 34% 36% 64% / 52% 51% 49% 48%; /* Optional: rounded corners */
+    background-color: #d9f1cc; /* Optional: background color */
+}
+
+.text-container-1 {
+    flex: 1;
+    border: 1px solid #ddd; /* Add border around text container */
+    padding: 30px; /* Add padding inside the container */
+    border-radius: 30% 70% 70% 30% / 51% 52% 48% 49%; /* Optional: rounded corners */
+    background-color: #eecea4; /* Optional: background color */
+}
+
+.text-container-2 {
+    flex: 1;
+    border: 1px solid #ddd; /* Add border around text container */
+    padding: 30px; /* Add padding inside the container */
+    border-radius: 66% 34% 36% 64% / 52% 51% 49% 48%; /* Optional: rounded corners */
+    background-color: #caedf7; /* Optional: background color */
+}
+
+p {
+    color: #000000; /* Change text color to be visible on the background */
+}
+
+/*Image Container*/
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    max-width: 100%; /* Ensure image scales within container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: add some border radius */
+}
+
+
+

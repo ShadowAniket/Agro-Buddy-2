@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroBuddy - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+
+      .search-spacing {
+        margin-left: 450px; /* Adjust the value as needed for more or less space */
+      }
+
+      /*Search Bar */
+      .glow-green {
+          box-shadow: 0 0 10px rgba(40, 167, 69, 0.5); /* Green glow */
+          border-width: 2px;
+          border-radius: 5px; /* Increase for more roundness if needed */
+          background-color: white;  /* White background */
+          color: #28a745; /* Green text */
+      }
+
+      .glow-green:hover {
+          box-shadow: 0 0 15px limegreen; /* Stronger glow on hover */
+      }
+
+      /* Button Style*/
+      .thin-border {
+          border-width: 1px;
+          border-style: solid;
+          border-color: #28a745; 
+          background-color: #28a745; /* Keep green background */
+          color: white; /* White text */
+      }
+
+      .thin-border:hover {
+          background-color: #218838; /* Darker green on hover */
+      }
+
+
+      /*Form Elements (Focus and Hover Effects) */
+      /* Green glowing effect on hover or focus */
+      .form-control:focus, 
+      .form-select:focus, 
+      .form-check-input:focus {
+          box-shadow: 0 0 8px 2px rgba(0, 255, 0, 0.8); /* Glowing green shadow */
+          border-color: #28a745; /* Green border */
+      }
+
+      .form-control:hover, 
+      .form-select:hover, 
+      .form-check-input:hover {
+          box-shadow: 0 0 8px 2px rgba(0, 255, 0, 0.8); /* Glowing green shadow */
+      }
+
+      /*List Items */
+      li {
+        list-style-type: none; /* No bullet points */
+      }
+
+      /*Slideshow Animation */
+      .small-container {
+          max-width: 1080px;
+          margin: auto;
+          padding-left: 25px;
+          padding-right: 25px;
+      }
+
+      .categories {
+          margin: 70px 0;
+      }
+
+      /* Slide 1 Text */
+      .carousel-caption.slide1 h2 {
+        color: rgb(0, 0, 0); /* Set text color to black */
+        font-size: 50px; /* Adjust font size */
+        font-weight: bold; /* Make text bold */
+        text-align: center; /* Center align text */
+        margin: 0; /* Remove default margin for better centering */
+      }
+
+      /* Slide 1 Caption */
+      .carousel-caption.slide1 {
+        position: absolute;
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+        padding: 20px;
+        color: black; /* Change text color for Slide 1 */
+        text-align: center; /* Center the text */
+        width: 60%; /* Adjust the width as needed */
+      }
+
+      /* Slide 3 Text */
+      .carousel-caption.slide3 p {
+        font-size: 35px; /* Adjust this value as needed */
+        line-height: 1.25; /* Adjust line height for better readability */
+        color: #fff; /* White text color for Slide 3 */
+        text-shadow: 2px 2px 4px rgb(0, 0, 0); /* Adds a shadow for readability */
+        margin: 0; /* Remove default margin */
+      }
+
+      /* Slide 3 Caption */
+      .carousel-caption.slide3 {
+        display: flex;
+        flex-direction: column; /* Stack the text and button vertically */
+        align-items: center; /* Horizontally center the content */
+        justify-content: center; /* Vertically center the content */
+        position: absolute;
+        top: 50%; /* Center vertically */
+        left: 20%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Center alignment */
+        padding: 20px;
+        text-align: center; /* Center align the text */
+        width: 60%; /* Adjust the width as needed */
+      }
+
+      /* Button Style */
+      .carousel-caption.slide3 .btn {
+          margin-top: 10px; /* Add space above the button */
+          padding: 10px 20px; /* Add padding inside the button */
+          /*background-color: #28a745;  Green background */
+          /*color: white;  White text */
+          /*border: none;  Remove default border */
+          border-radius: 20px; /* Rounded corners */
+      }
+
+      .carousel-caption.slide3 .btn:hover {
+          background-color: #218838; /* Darker green on hover */
+      }
+
+      .col-3 {
+          flex-basis: 30%;
+          min-width: 250px;
+          margin-bottom: 30px;
+      }
+
+      .row {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+
+      .equal-img {
+          width: 100%;
+          height: 300px; /* Set a fixed height for all % */
+          object-fit: cover; /* Ensures the image covers the box while maintaining aspect ratio */
+      }
+
+      /*Slide-show Container */
+      .offer {
+          background: radial-gradient(#fff, #c2efc5);
+          margin-top: 80px;
+          padding: 15px;
+      }
+
+      .col-1 .offer-img {
+          width: 500px;
+          height: 350px;
+          object-fit: cover;
+          border-radius: 15px;
+      }
+
+      .col-0 {
+          flex-basis: 50%;
+          min-width: 300px;
+          margin-right: 200px; /* Adding space between text and image */
+      }
+
+      .col-0 h1 {
+          font-size: 40px;
+          line-height: 60px;
+          margin: 25px 0;
+      }
+
+      .row-0 {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          justify-content: flex-start; /* Aligning items to the start */
+      }
+
+      .col-1 {
+          flex-shrink: 0; /* Ensuring image doesn't get squeezed */
+      }
+
+      .col-3 {
+          justify-content: space-between;
+      }
+
+      .carousel-item {
+          position: relative;
+      }
+
+/* Base Carousel Caption Styles */
+      .carousel-caption {
+        position: absolute;
+        top: 50%; /* Center vertically */
+        left: 20px; /* Adjust this value to control how far from the left edge it starts */
+        transform: translateY(-50%); /* Adjust vertical alignment to center */
+        padding: 20px;
+        color: #fff; /* Default text color */
+        text-align: left; /* Default left-aligned text */
+        width: 60%; /* Adjust the width as needed to fit the content */
+      }
+
+      /* Slide 1 Caption */
+      .carousel-caption.slide1 {
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+        color: black; /* Change text color for Slide 1 */
+        text-align: center; /* Center the text */
+      }
+
+      /* Slide 3 Caption remains as is */
+      .carousel-caption.slide3 {
+        /* Inherits the base styles */
+        color: #fff; /* White text color for Slide 3 */
+        text-align: left; /* Left-aligned text */
+      }
+
+      /* Intro Containers*/
+      .intro-box {
+          max-width: 1200px; /* Adjust as needed */
+          margin: 0 auto; /* Center the container */
+          padding: 0 20px; /* Adjust padding as needed */
+      }
+
+      .row {
+          display: flex;
+          align-items: center; /* Vertically align items */
+          gap: 70px; /* Space between text and image */
+          margin-bottom: 40px; /* Space between rows */
+      }
+
+      .text-container {
+          flex: 1;
+          border: 1px solid #ddd; /* Add border around text container */
+          padding: 20px; /* Add padding inside the container */
+          border-radius: 66% 34% 36% 64% / 52% 51% 49% 48%; /* Optional: rounded corners */
+          background-color: #d9f1cc; /* Optional: background color */
+          position: relative;
+          right: 100px;
+      }
+
+      .image-container {
+          flex: 1;
+      }
+
+      .image-container img {
+          max-width: 100%; /* Ensure image scales within container */
+          height: auto; /* Maintain aspect ratio */
+          border-radius: 10px; /* Optional: add some border radius */
+      }
+
+      .text-container-1 {
+          flex: 1;
+          border: 1px solid #ddd; /* Add border around text container */
+          padding: 30px; /* Add padding inside the container */
+          border-radius: 30% 70% 70% 30% / 51% 52% 48% 49%; /* Optional: rounded corners */
+          background-color: #eecea4; /* Optional: background color */
+          position: relative;
+          left: 100px;
+      }
+
+      .text-container-2 {
+          flex: 1;
+          border: 1px solid #ddd; /* Add border around text container */
+          padding: 30px; /* Add padding inside the container */
+          border-radius: 66% 34% 36% 64% / 52% 51% 49% 48%; /* Optional: rounded corners */
+          background-color: #caedf7; /* Optional: background color */
+          position: relative;
+          right: 100px;
+      }
+
+      p {
+          color: #000000; /* Change text color to be visible on the background */
+      }
+
+      .row {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          justify-content: center; /* Center align the content */
+          text-align: center; /* Center align the text */
+          position: relative; /* Ensures the content is positioned correctly */
+          z-index: 1; /* Ensure content is above the background image */
+          padding: 50px 0; /* Add padding for spacing */
+      }
+
+      /*General Styles */
+      .small-container {
+          max-width: 1080px;
+          margin: auto;
+          padding-left: 25px;
+          padding-right: 25px;
+      }
+    </style>
+</head>
+<body>
+    <?php include 'nav.php'; ?>
+    
+    <!------------------------------------slideshow------------------------------------>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4200" class="carousel-caption slide3-text">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/carousel-inner-2.jpg" class="d-block w-100" height="500" alt="...">
+          <div class="carousel-caption slide1">
+            <h2>Welcome To <br>Agro-Buddy!</h2>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/carousel-inner-1%20anime.webp" class="d-block w-100" height="500" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/carousel-inner-3.jpg" class="d-block w-100" height="500" alt="...">
+          <div class="carousel-caption slide3">
+            <p>Farm-fresh to your doorstep<br>savor the taste of <br>health with every bite.</p> 
+            <a href="Product.html" class="btn btn-success">Explore More</a>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!------------------------------------intro info------------------------------------>
+
+    <div class="intro-box">
+      <div class="row">
+          <div class="text-container">
+              <h3>Introduction</h3>
+              <p>
+                  Welcome to a healthier lifestyle, where technology meets tradition. At our farm, we believe in delivering fresh, nutrient-rich food straight from the fields to your doorstep. With a commitment to sustainability and quality, we bring nature’s best produce to your home, ensuring every meal is both delicious and wholesome. Experience the convenience of farm-to-table delivery, and taste the difference of truly fresh food.
+              </p>
+          </div>
+          <div class="image-container">
+              <img src="images/Health%20is%20wealth.jpg" alt="Farm Image">
+          </div>
+      </div>
+      <div class="row">
+          <div class="image-container">
+              <img src="images/agriculture.png" alt="Farm Image">
+          </div>
+          <div class="text-container-1">
+              <h3>About our Farm</h3>
+              <p>
+                  At Our Farm, we are committed to providing fresh, healthy food, sourced directly from our fields to your table. With our farm-to-customer approach, we ensure quality produce without middlemen, offering a transparent and fair B2C business model. Our focus is on sustainability, nurturing the land, and delivering nutrient-rich crops that benefit both the community and the environment. Experience the purity of nature in every bite!
+              </p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="text-container-2">
+              <h3>Why choose us</h3>
+              <p>
+                  We prioritize delivering fresh, nutritious, and ethically grown produce straight from our farm. By cutting out middlemen, we offer competitive prices while ensuring fair compensation for farmers. Our commitment to sustainability and quality control means you can trust the source and freshness of every product. Plus, with a focus on customer satisfaction and eco-friendly practices, we strive to make healthy living both accessible and impactful.
+              </p>
+          </div>
+          <div class="image-container">
+              <img src="images/b%20to%20c%20work%20done.avif" alt="Farm Image">
+          </div>
+      </div>
+  </div>
+  
+
+    <!------------------------------------Footer------------------------------------>
+      <footer class="container py-5">
+        <hr style="border-top: 3px solid rgb(0, 0, 0);">
+        <div class="row">
+          
+          <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="#">Farm-to-Door Freshness</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Sustainable Packaging</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Real-Time Order Tracking</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Customizable Produce Baskets</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Seasonal Fruit Available</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Nutritional Info </a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Media</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="#">Google</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Facebook</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Instagram</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Website</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="#">Sourcing Guidelines</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Farming Practices</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Nutritional Benefits</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Organic Certifications</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="#">Sustainability</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Freshness Guarantee</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Local Partnerships</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Quality Assurance</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Customer Commitment</a></li>
+            </ul>
+          </div>
+        </div>
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 ">
+            <p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
+          
+            <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+          
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+            </ul>
+        </footer>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          let carousel = new bootstrap.Carousel(document.getElementById('carouselExampleIndicators'), {
+              interval: 4200 // Regular slide speed
+          });
+  
+          // Faster first transition
+          setTimeout(() => {
+              carousel.next();
+          }, 1000); // First slide transitions in 1.5 seconds
+      });
+  </script>
+  
+  </body>
+</html>

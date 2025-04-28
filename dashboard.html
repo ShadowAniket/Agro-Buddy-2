@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .hidden {
+            display: none;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            display: block;
+            margin: 10px;
+            font-size: 20px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to Your Dashboard</h1>
+        <p>Your role: <strong id="userRoleDisplay"></strong></p>
+
+        <div id="buyerLinks" class="hidden">
+            <h2>Buyer Pages</h2>
+            <a href="Home.html">Home</a>
+            <a href="Product.html">Products</a>
+            <a href="Fruits.html">Fruits</a>
+            <a href="Vegetables.html">Vegetables</a>
+            <a href="Pulses.html">Pulses</a>
+            <a href="Cart.html">Cart</a>
+            <a href="About.html">About</a>
+        </div>
+
+        <div id="sellerLinks" class="hidden">
+            <h2>Seller Pages</h2>
+            <a href="Home.html">Home</a>
+            <a href="Product.html">Products</a>
+            <a href="Fruits.html">Fruits</a>
+            <a href="Vegetables.html">Vegetables</a>
+            <a href="Pulses.html">Pulses</a>
+            <a href="Soil-Analysis.html">Soil Analysis</a>
+            <a href="Weather-Forecast.html">Weather Forecast</a>
+            <a href="Cart.html">Cart</a>
+            <a href="About.html">About</a>
+        </div>
+
+        <div id="bothLinks" class="hidden">
+            <h2>Buyer & Seller Pages</h2>
+            <a href="Home.html">Home</a>
+            <a href="Product.html">Products</a>
+            <a href="Fruits.html">Fruits</a>
+            <a href="Vegetables.html">Vegetables</a>
+            <a href="Pulses.html">Pulses</a>
+            <a href="Soil-Analysis.html">Soil Analysis</a>
+            <a href="Weather-Forecast.html">Weather Forecast</a>
+            <a href="Cart.html">Cart</a>
+            <a href="About.html">About</a>
+        </div>
+
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        // Get stored user role
+        var userRole = localStorage.getItem("userRole");
+
+        // Display the role
+        document.getElementById("userRoleDisplay").textContent = userRole ? userRole.toUpperCase() : "Not Set";
+
+        // Show relevant links based on role
+        if (userRole === "buying") {
+            document.getElementById("buyerLinks").classList.remove("hidden");
+        } else if (userRole === "selling") {
+            document.getElementById("sellerLinks").classList.remove("hidden");
+        } else if (userRole === "both") {
+            document.getElementById("bothLinks").classList.remove("hidden");
+        } else {
+            alert("Invalid Role! Redirecting to login...");
+            window.location.href = "login.html";
+        }
+
+        // Logout function
+        function logout() {
+            localStorage.removeItem("userRole");
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+</html>

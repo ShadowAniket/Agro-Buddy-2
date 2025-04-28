@@ -1,0 +1,20 @@
+<?php
+// Copy this file to config2.php and fill in your credentials
+
+$host = 'localhost';
+$dbname = 'agrobuddy';
+$username = 'your_db_user';
+$password = 'your_db_password';
+
+// OpenWeather API key
+$openweather_api_key = 'your_openweather_api_key';
+
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+} catch(PDOException $e) {
+    error_log("Connection failed: " . $e->getMessage());
+    die("Connection failed. Please try again later.");
+}
+?>
