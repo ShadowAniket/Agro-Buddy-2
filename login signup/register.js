@@ -8,7 +8,7 @@
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
-    apiKey: "AIzaSyB07xaJW-ygpwpI3dQu2gqdBz9aqfWYBho",
+    apiKey: "Your-Google-API-Key",
     authDomain: "agro-buddy-d0267.firebaseapp.com",
     projectId: "agro-buddy-d0267",
     storageBucket: "agro-buddy-d0267.firebasestorage.app",
